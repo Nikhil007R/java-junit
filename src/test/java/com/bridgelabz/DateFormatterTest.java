@@ -19,14 +19,17 @@ class DateFormatterTest {
         assertEquals("04-04-2025", formatter.formatDate("2025-04-04"));
     }
 
+    @Test
     void testEmptyDate(){
         assertThrows(IllegalArgumentException.class, () -> formatter.formatDate("") );
     }
 
+    @Test
     void testNullDate() {
         assertThrows(IllegalArgumentException.class, () -> formatter.formatDate(null));
     }
 
+    @Test
     void testIllegalDate(){
         assertThrows(IllegalArgumentException.class, ()-> formatter.formatDate("abcdef"));
     }
